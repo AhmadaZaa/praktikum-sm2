@@ -29,34 +29,51 @@ class Buku {
 
 public class classPerpus {
     public static void main(String[] args) {
-        Buku b1 = new Buku();
-        b1.setJudul("Pengantar Teknologi Informasi");
-        b1.setPenulis(new String[]{"John Doe"});
-        b1.setKategori("Teknologi");
-        b1.displayInfo();
+        Buku[] buku = new Buku[35];
+        String[][] daftarBuku = {
+            {"Teknologi", "Pengantar Teknologi Informasi", "John Doe"},
+            {"Teknologi", "Dasar-dasar Jaringan Komputer", "Andrew Tanenbaum"},
+            {"Teknologi", "Kecerdasan Buatan dan Aplikasinya", "Stuart Russell"},
+            {"Teknologi", "Algoritma dan Struktur Data", "Robert Sedgewick"},
+            {"Teknologi", "Pemrograman Java untuk Pemula", "Herbert Schildt"},
+            
+            {"Sejarah", "Sejarah Dunia yang Disembunyikan", "Jonathan Black"},
+            {"Sejarah", "Sejarah Peradaban Islam", "Karen Armstrong"},
+            {"Sejarah", "Perang Dunia II dalam Perspektif Baru", "Max Hastings"},
+            {"Sejarah", "Sejarah Nusantara", "Ahmad Mansur Suryanegara"},
+            {"Sejarah", "The Silk Roads", "Peter Frankopan"},
+            
+            {"Self Development", "Atomic Habits", "James Clear"},
+            {"Self Development", "The Power of Habit", "Charles Duhigg"},
+            {"Self Development", "Grit: The Power of Passion and Perseverance", "Angela Duckworth"},
+            {"Self Development", "Mindset: The New Psychology of Success", "Carol S. Dweck"},
+            {"Self Development", "Ikigai: The Japanese Secret to a Long and Happy Life", "Hector Garcia"},
+            
+            {"Filsafat", "Dasar-dasar Filsafat", "Aristoteles"},
+            {"Filsafat", "Filsafat Eksistensialisme", "Jean-Paul Sartre"},
+            {"Filsafat", "The Republic", "Plato"},
+            {"Filsafat", "Being and Time", "Martin Heidegger"},
+            {"Filsafat", "Meditations", "Marcus Aurelius"},
+            
+            {"Politik", "Konsep Politik Modern", "SP. Varma"},
+            {"Politik", "The Prince", "Niccolò Machiavelli"},
+            {"Politik", "Demokrasi dan Kebebasan", "Fareed Zakaria"},
+            {"Politik", "The Road to Serfdom", "Friedrich Hayek"},
+            {"Politik", "The Communist Manifesto", "Karl Marx"},
+            
+            {"Ekonomi", "Wealth of Nations", "Adam Smith"},
+            {"Ekonomi", "Capital in the Twenty-First Century", "Thomas Piketty"},
+            {"Ekonomi", "Freakonomics", "Steven D. Levitt"},
+            {"Ekonomi", "The General Theory of Employment, Interest, and Money", "John Maynard Keynes"},
+            {"Ekonomi", "Thinking, Fast and Slow", "Daniel Kahneman"}
+        };
         
-        Buku b2 = new Buku();
-        b2.setJudul("Sejarah Dunia yang Disembunyikan");
-        b2.setPenulis(new String[]{"Jonathan Black"});
-        b2.setKategori("Sejarah");
-        b2.displayInfo();
-        
-        Buku b3 = new Buku();
-        b3.setJudul("Atomic Habits");
-        b3.setPenulis(new String[]{"James Clear"});
-        b3.setKategori("Self Development");
-        b3.displayInfo();
-        
-        Buku b4 = new Buku();
-        b4.setJudul("Dasar-dasar Filsafat");
-        b4.setPenulis(new String[]{"Aristoteles"});
-        b4.setKategori("Filsafat");
-        b4.displayInfo();
-        
-        Buku b5 = new Buku();
-        b5.setJudul("Konsep Politik Modern");
-        b5.setPenulis(new String[]{"SP. Varma"});
-        b5.setKategori("Politik");
-        b5.displayInfo();
+        for (int i = 0; i < buku.length; i++) {
+            buku[i] = new Buku();
+            buku[i].setKategori(daftarBuku[i][0]);
+            buku[i].setJudul(daftarBuku[i][1]);
+            buku[i].setPenulis(new String[]{daftarBuku[i][2]});
+            buku[i].displayInfo();
+        }
     }
 }
