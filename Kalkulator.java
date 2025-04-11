@@ -1,3 +1,4 @@
+// Ubah nama jadi Kalkulator - Static Modifier
 import java.util.Scanner;
 
 class Aritmatika {
